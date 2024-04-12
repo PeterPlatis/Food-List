@@ -1,27 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    height: 50vh;
+    gap: 100px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 2170px;
 }
 
 .week {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    width: 80vw;
+    /* width: 80vw; */
     justify-self: center;
+    gap: 20px;
 }
 
 #week-1 {
     grid-row: 1 / 1;
+    align-self: center;
 }
 
 #week-2 {
     grid-row: 2 / 2;
+    align-self: center;
 }
 
 .day {
-    border: 1px solid black;
+    border: 4px solid black;
     border-radius: 10px;
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px 100px;
+    overflow: hidden;
+}
+
+.day h2 {
+    grid-row: 1 / 1;
+    justify-self: center;
+    border-bottom: 3px solid black;
+    width: fit-content;
+    text-align: center;
+    align-self: center;
+    height: 50px;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.lunch-dinner {
+    grid-row: 2 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background-color: rgb(240, 240, 240);
+    
+}
+
+.foods {
+    grid-row: 3 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-self: center;
+    height: 100%;
+    font-size: large;
+    font-weight: 600;
+}
+
+li {
+    width: 100%;
+    height:100%;
+    list-style: none;
+    border: 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
